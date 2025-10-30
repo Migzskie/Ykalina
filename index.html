@@ -1,150 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    <script> src="jquery.js" </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-           body{
-                background-color: rgb(255, 255, 255);
-                background-image: url("https://cdn.wallpapersafari.com/30/0/n0HOqk.gif");
-                background-position-x: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                display: flex;
-                align-items: center;
-                height: 100vh;
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+      background-image: url("https://cdn.wallpapersafari.com/30/0/n0HOqk.gif");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-                }
- 
-                button {
-                  align-items: center;
-                  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #e300eb);
-                  border: 0;
-                  border-radius: 8px;
-                  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-                  box-sizing: border-box;
-                  color: #ffffff;
-                  display: flex;
-                  font-size: 18px;
-                  justify-content: center;
-                  line-height: 1em;
-                  max-width: 100%;
-                  min-width: 140px;
-                  padding: 3px;
-                  text-decoration: none;
-                  user-select: none;
-                  -webkit-user-select: none;
-                  touch-action: manipulation;
-                  white-space: nowrap;
-                  cursor: pointer;
-                  transition: all 0.3s;
-                }
+    .profile-card {
+      background-color: rgba(255, 255, 255, 0.45);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      padding: 40px 20px;
+      text-align: center;
+      color: #4a1d96;
+      transition: transform 0.3s ease;
+    }
 
-                button:active,
-                button:hover {
-                  outline: 0;
-                }
+    .profile-card:hover {
+      transform: scale(1.05);
+    }
 
-                button span {
-                  background-color: rgb(5, 6, 45);
-                  padding: 16px 24px;
-                  border-radius: 6px;
-                  width: 100%;
-                  height: 100%;
-                  transition: 300ms;
-                }
+    .profile-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #6c2fb3;
+      box-shadow: 0 0 15px rgba(108, 47, 179, 0.5);
+      margin-bottom: 20px;
+    }
 
-                button:hover span {
-                  background: none;
-                }
+    .profile-card h2 {
+      font-weight: bold;
+      color: #3b0764;
+    }
 
-                button:active {
-                  transform: scale(0.9);
-                }
-                input {
-                background-color: #6c2fb3;
-                border: none;
-                padding: 1rem;
-                font-size: 1rem;
-                width: 13em;
-                border-radius: 1rem;
-                color: lightcoral;
-                box-shadow: 0 0.4rem #dfd9d9;
-                cursor: pointer;
-                margin-bottom: 10px;
-                }
+    .profile-card p {
+      color: #5b21b6;
+      font-size: 16px;
+    }
 
-                input:focus {
-                outline-color: lightcoral;
-                }
+    .btn-custom {
+      background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #e300eb);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-                
-           div{
-                background-color: rgba(255, 255, 255, 0.438);
-                width: 450px;
-                padding: 40px;
-                border-radius: 16px;
-                margin: auto;
-                backdrop-filter: blur(8px);
-           }
-           button{
-                    margin-top: 10px;
-           }
-
-    </style>
-
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(175, 64, 255, 0.6);
+    }
+  </style>
 </head>
 <body>
 
-    <div>
-    <head>
-  <link href="https://fonts.cdnfonts.com/css/font" rel="stylesheet">
-                
-  </head>
-<body>
-  <h1 class="text-center" style="color: rgb(70, 16, 95); background-color: rgba(0, 89, 255, 0); font-family: 'Minecraft AE', sans-serif;"> Simple Calculator </h1>
-</body>
-
-    <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder;"> Name </label> <br>
-    <input type="text" style="background-color: lightblue; border: 1px solid blue; padding: 5px; font-weight; font-size:larger:  bold;" id="name" placeholder="Type here..." class="form-control">
-    <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder;"> First Number </label> <br>
-    <input type="text" style="background-color: lightblue; border: 1px solid blue; padding: 5px; font-weight; font-size:larger: bold;" id="num1" placeholder="Type here..." class="form-control">
-    <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder;"> Second Number </label> <br>
-    <input type="text" style="background-color: lightblue; border: 1px solid blue; padding: 5px; font-weight; font-size:larger: bold;" id="num2" placeholder="Type here..." class="form-control">
-    <button style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #f8f8f8; background-color: #6c2fb3; font-weight: bold;" class="form-control btn btn-primary" id="btn">Calculate</button>
-    <p type="text": style="font-weight: bolder;" id="fnum">First Number is:</p>
-    <p type="text": style="font-weight: bolder;" id="snum">Second Number is:</p>
-    <p type="text": style="font-weight: bolder;" id="fname"></p>
-    <p type="text": style="font-weight: bolder;" id="result">The result will display here:</p>
-
-</div>
-</body>
-
-
-<script type="text/javascript">
-
-    $("#btn").click(function(){
-        var name = $("#name").val()
-        var fnum = +$("#num1").val()
-        var snum = +$("#num2").val()
-
-          var result = fnum + snum;
-
-          $("#fname").text("Hello " + "" + name);
-          $("#fnum").append(fnum);
-          $("#snum").append(snum);
-          $("#result").html("<strong>The result is: </strong>" + result)
-
-    });
-        
-    </script>
-
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profile-pic">
+    <h2 id="profile-name">Miguel Vonn Andrei Ykalina</h2>
+    <p>Web Developer | Designer | Tech Enthusiast</p>
+    <a href="#" class="btn-custom">Contact Me</a>
+  </div>
 
 </body>
 </html>
